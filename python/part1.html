@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>part1_1756058607</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>part_1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -32,6 +32,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -7536,8 +7537,8 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Quick demo: Simulating brain signals</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Create simulated LFP data</span>
 <span class="n">sampling_rate</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Hz</span>
@@ -7856,7 +7857,7 @@ Updated recording duration: 360 seconds
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="4.-Working-with-Arrays:-NumPy-Basics">4. Working with Arrays: NumPy Basics<a class="anchor-link" href="#4.-Working-with-Arrays:-NumPy-Basics">¶</a></h2><p>While Python lists and dictionaries are useful for organizing and labeling data (like experiment metadata or recording parameters), they aren't optimized for fast numerical computations on large datasets. In neuroscience, we often work with long time series, multi-channel recordings, or large matrices of spike data—tasks that require efficient storage and rapid mathematical operations.</p>
 <p>NumPy arrays are designed specifically for this purpose. Unlike lists or dictionaries, NumPy arrays store data in contiguous memory blocks, allowing for vectorized operations and leveraging optimized C libraries under the hood. This makes them much faster and more memory-efficient, especially when performing repeated calculations or processing large-scale neural data.</p>
-<h3 id="Creating-Arrays">Creating Arrays<a class="anchor-link" href="#Creating-Arrays">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<h3 id="Creating-Arrays">Creating Arrays<a class="anchor-link" href="#Creating-Arrays">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">array_name</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 </pre></div>
 <h3 id="Array-Operations">Array Operations<a class="anchor-link" href="#Array-Operations">¶</a></h3><div class="highlight"><pre><span></span><span class="n">array_name</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Add 1 to each element</span>
@@ -7877,7 +7878,7 @@ Updated recording duration: 360 seconds
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Creating arrays</span>
 <span class="n">simple_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -7948,8 +7949,8 @@ Sequence: [0.  0.2 0.4 0.6 0.8]
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># 1. Create simulated spike data</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># For reproducibility</span>
@@ -8032,7 +8033,7 @@ High activity periods: 94 timepoints
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="5.-Working-with-Matrices-and-Scalars">5. Working with Matrices and Scalars<a class="anchor-link" href="#5.-Working-with-Matrices-and-Scalars">¶</a></h2><p>NumPy provides powerful support for matrix operations, which are essential in neuroscience for handling multi-channel recordings and complex data transformations.</p>
-<h3 id="Creating-Matrices">Creating Matrices<a class="anchor-link" href="#Creating-Matrices">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<h3 id="Creating-Matrices">Creating Matrices<a class="anchor-link" href="#Creating-Matrices">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
                    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>  <span class="c1"># 2x3 matrix</span>
 </pre></div>
@@ -8056,7 +8057,7 @@ High activity periods: 94 timepoints
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Create a matrix (simulating multi-channel neural data)</span>
 <span class="n">neural_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -8148,7 +8149,7 @@ Normalized data:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Create sample neural data (time series from 3 neurons)</span>
 <span class="n">spike_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -8208,11 +8209,11 @@ Data at high activity times:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="7.-Python-Functions">7. Python Functions<a class="anchor-link" href="#7.-Python-Functions">¶</a></h2><p>Functions are reusable code blocks that perform a specific task. They help us organize code and avoid repetition.</p>
-<h3 id="Defining-a-Function">Defining a Function<a class="anchor-link" href="#Defining-a-Function">¶</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
+<h3 id="Defining-a-Function">Defining a Function<a class="anchor-link" href="#Defining-a-Function">¶</a></h3><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
     <span class="c1"># Code to perform the task</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
-<h3 id="Example:-A-function-to-calculate-the-firing-rate">Example: A function to calculate the firing rate<a class="anchor-link" href="#Example:-A-function-to-calculate-the-firing-rate">¶</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_firing_rate</span><span class="p">(</span><span class="n">spike_times</span><span class="p">,</span> <span class="n">window_start</span><span class="p">,</span> <span class="n">window_end</span><span class="p">):</span>
+<h3 id="Example:-A-function-to-calculate-the-firing-rate">Example: A function to calculate the firing rate<a class="anchor-link" href="#Example:-A-function-to-calculate-the-firing-rate">¶</a></h3><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_firing_rate</span><span class="p">(</span><span class="n">spike_times</span><span class="p">,</span> <span class="n">window_start</span><span class="p">,</span> <span class="n">window_end</span><span class="p">):</span>
     <span class="n">window_duration</span> <span class="o">=</span> <span class="p">(</span><span class="n">window_end</span> <span class="o">-</span> <span class="n">window_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>  <span class="c1"># Convert to seconds</span>
     <span class="n">spikes_in_window</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">spike</span> <span class="ow">in</span> <span class="n">spike_times</span> 
                           <span class="k">if</span> <span class="n">window_start</span> <span class="o">&lt;=</span> <span class="n">spike</span> <span class="o">&lt;=</span> <span class="n">window_end</span><span class="p">)</span>
@@ -8231,8 +8232,8 @@ Data at high activity times:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Function to calculate firing rate</span>
-<span class="k">def</span> <span class="nf">calculate_firing_rate</span><span class="p">(</span><span class="n">spike_times</span><span class="p">,</span> <span class="n">window_start</span><span class="p">,</span> <span class="n">window_end</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_firing_rate</span><span class="p">(</span><span class="n">spike_times</span><span class="p">,</span> <span class="n">window_start</span><span class="p">,</span> <span class="n">window_end</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Calculate firing rate in a time window.</span>
 <span class="sd">    """</span>
     <span class="n">window_duration</span> <span class="o">=</span> <span class="p">(</span><span class="n">window_end</span> <span class="o">-</span> <span class="n">window_start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>  <span class="c1"># Convert to seconds</span>
@@ -8269,7 +8270,7 @@ Data at high activity times:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="8.-Control-Flow:-Making-Decisions">8. Control Flow: Making Decisions<a class="anchor-link" href="#8.-Control-Flow:-Making-Decisions">¶</a></h2><p>Now that we understand basic data types and functions, we need ways to make our code more dynamic. Control flow tools like <code>if</code> statements and loops let us execute code conditionally or repeatedly. This is essential for processing neural data where we often need to analyze data point by point or apply different analyses based on conditions.</p>
+<h2 id="8.-Control-Flow:-Controlling-how-our-code-runs">8. Control Flow: Controlling how our code runs<a class="anchor-link" href="#8.-Control-Flow:-Controlling-how-our-code-runs">¶</a></h2><p>Now that we understand basic data types and functions, we need ways to make our code more dynamic. Control flow tools like <code>if</code> statements and loops let us execute code conditionally or repeatedly. This is essential for processing neural data where we often need to analyze data point by point or apply different analyses based on conditions.</p>
 <h3 id="If-Statements">If Statements<a class="anchor-link" href="#If-Statements">¶</a></h3><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
     <span class="c1"># Code to execute if condition is true</span>
 <span class="k">elif</span> <span class="n">another_condition</span><span class="p">:</span>
@@ -8353,7 +8354,7 @@ Liftoff!
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="9.-Visualizing-Data:-Matplotlib-Basics">9. Visualizing Data: Matplotlib Basics<a class="anchor-link" href="#9.-Visualizing-Data:-Matplotlib-Basics">¶</a></h2><p>Now that we can work with arrays, matrices, and process data using functions and control flow, we need to visualize our results. Data visualization is crucial in neuroscience - it helps us understand patterns in neural activity, verify our analyses, and communicate our findings.</p>
 <p>Matplotlib is a popular library for creating static, animated, and interactive visualizations in Python. It works seamlessly with NumPy arrays, making it perfect for plotting neural data.</p>
-<h3 id="Basic-Plot">Basic Plot<a class="anchor-link" href="#Basic-Plot">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<h3 id="Basic-Plot">Basic Plot<a class="anchor-link" href="#Basic-Plot">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'X-axis label'</span><span class="p">)</span>
@@ -8361,8 +8362,8 @@ Liftoff!
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Plot title'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<h3 id="Example:-Plotting-a-sine-wave">Example: Plotting a sine wave<a class="anchor-link" href="#Example:-Plotting-a-sine-wave">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<h3 id="Example:-Plotting-a-sine-wave">Example: Plotting a sine wave<a class="anchor-link" href="#Example:-Plotting-a-sine-wave">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -8386,8 +8387,8 @@ Liftoff!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Create time points</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
@@ -8454,8 +8455,8 @@ Liftoff!
 <li><strong>Dictionaries</strong> help us organize our experimental parameters</li>
 <li><strong>NumPy arrays</strong> efficiently store and process our signals</li>
 <li><strong>Functions</strong> make our analysis code reusable</li>
-<li><strong>Control flow</strong> helps us process data conditionally</li>
-<li><strong>Array indexing</strong> lets us access specific time points</li>
+<li><strong>Control flow</strong> helps us process data under different conditions</li>
+<li><strong>Array indexing</strong> lets us access specific points in our data</li>
 <li><strong>Matplotlib</strong> helps us visualize our results</li>
 </ul>
 <p>Let's create a complete example that demonstrates a typical neural data analysis workflow:</p>
@@ -8474,11 +8475,11 @@ Liftoff!
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Create time points (1000 points over 1 second)</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
@@ -8493,8 +8494,8 @@ Liftoff!
 <span class="p">}</span>
 
 <span class="c1"># Function to create brain waves</span>
-<span class="k">def</span> <span class="nf">create_brain_wave</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">):</span>
-    <span class="sd">"""Create a sinusoidal brain wave."""</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_brain_wave</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Create a sinusoidal brain wave."""</span>
     <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">frequency</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
 
 <span class="c1"># Generate different components</span>
@@ -8534,7 +8535,7 @@ Liftoff!
 
 <span class="c1"># Calculate and print signal properties</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Signal Properties:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Theta amplitude: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> µV"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Theta amplitude: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> µV"</span><span class="p">)</span> <span class="c1"># ":.2f" means print uses 2 decimal places</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Gamma amplitude: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> µV"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Noise std: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">noise</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> µV"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Combined signal range: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">combined_signal</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> µV"</span><span class="p">)</span>
@@ -8595,9 +8596,9 @@ Combined signal range: 15.11 µV
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import required library for loading MATLAB files</span>
-<span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">sio</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Load a .mat file</span>
 <span class="n">mat</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="s1">'sample_data.mat'</span><span class="p">)</span>
